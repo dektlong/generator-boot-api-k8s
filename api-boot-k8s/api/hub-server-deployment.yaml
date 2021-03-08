@@ -1,6 +1,6 @@
 ---
 actions:
-  to: kubernetes/api/hub-server-deployment.yaml
+  to: k8s-APIs/hub-server-deployment.yaml
 ---
 apiVersion: apps/v1
 kind: Deployment
