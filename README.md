@@ -1,63 +1,9 @@
-# Simple generator for Kubernetes resources
+# Generator to add Micro-Api and Spring Boot Kubernetes resources
 
-This generator creates a Kubernetes Service and Deployment Resource to deploy a Spring Boot application.  It also can create the Kubernetes resources for deploying a MySQL database or a small Kafka cluster, should the application need it.
+This generator creates a Kubernetes Service and Deployment Resource to deploy a Spring Cloud Gateway, API Hub and Spring Boot application.  It also can create the Kubernetes resources for deploying a Spring Boot Observer Sidecar, should the application need it.
 
 If you used the starter service, then the generator has already been executed and you can deploy it's required services and then build and deploy the application.
 
-## Deploy required services
-
-If your application needs services such as a database or message broker, this section shows you how to deploy these services to Kubernetes
-
-### MySQL
-
-**Step 1:** Create a secret:
-
-```
-kubectl create secret generic mysql \
-  --from-literal=mysql-root-password=$(echo $RANDOM) \
-  --from-literal=mysql-password=$(echo $RANDOM)
-```
-
-**Step 2:** Deploy the database:
-
-```
-kubectl apply -f kubernetes/services/mysql
-```
-
-#### Deleting Resources
-
-To recreate the secret, first delete the existing secret:
-
-```
-kubectl delete secret mysql
-```
-To delete the database storage, delete the persistent volume:
-
-```
-kubectl delete pvc mysql
-```
-
-To delete the MySQL service and deployment in addition to the persistent volume:
-
-```
-kubectl delete deployment,services,pvc -l app=mysql
-```
-
-### Kafka
-
-Deploy the cluster:
-
-```
-kubectl apply -f kubernetes/services/kafka
-```
-
-#### Deleting Resources
-
-To delete the Kafka cluster and Zookeeper:
-
-```
-kubectl delete deployment,services -l app=kafka
-```
 
 ## Building and deploying the application
 
@@ -89,7 +35,7 @@ The README.md file from the code repository for the appliation should include a 
 
 # Generator Information
 
-This generator creates the Kubernetes `service` and `deploymnet` resources files to deploy a Spring Boot application using `kubectl`
+This generator creates the Kubernetes `service` and `deploymnet` resources files to deploy a Spring Cloud Gateway, API Hub and Spring Boot using `kubectl`
 
 To use the generator you will need to install the following command line tool:
 
@@ -104,15 +50,11 @@ These commands use the `tss` CLI.
 
 * A `kubernetes` directory with a `service.yaml` and `deployment.yaml`
 
-`tss k8s-simple new-services` creates
-
-* A `kubernetes/services/<service-name>` directory with Kubernetes resource files for various services.  Currently only `mysql` service name is supported.
-
 
 ## Generator installation
 
 ```
-tss generator install --go-getter-url=github.com/markpollack/generator-k8s-simple
+tss generator install --go-getter-url=github.com/dektlong/generator-boot-api-k8s
 ```
 
 To use the install command you need to install [go-getter](https://github.com/hashicorp/go-getter#installation-and-usage) CLI.
