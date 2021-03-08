@@ -6,21 +6,16 @@ This generator uses standard ```kubectl``` resources and services to optimize a 
 
 Use these commands in the ```commands``` section of the Generators UI and/or in the `acc generator` CLI.
 
-`api-boot-k8s core` creates a ```application``` library with the following artifacts
+`api-boot-k8s core` creates a ```kubernetes/core``` library with the following artifacts
 
 - Spring Boot deployment and service
 - Tanzu Observability configuration (via wavefront K8s proxy)  
 - Optional: Spring Boot Observer Sidecar (needed Spring Boot Observer server to run separately)
-- Sample tss.yaml file for adding generator Options (not implemented in generator yet)
 
-`api-boot-k8s api` creates a ```api-routes``` library with the following artifacts
+`api-boot-k8s api` creates a ```kubernetes/api`` library with the following artifacts
 
-- Spring Cloud Gateway Kubernetes deployment 
-- Tanzu API Hub Kubernetes deployment and service 
-- Example route definitions - Config, Mapping and Service
-- Openapi endpoint configuration
-- API validation configuration (not implemented yet in API Validator)
-
+- Tanzu Spring Cloud Gateway deployment 
+- Tanzu API Hub deployment and service 
 
 ## Building and deploying the application
 
