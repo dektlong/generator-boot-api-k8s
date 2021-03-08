@@ -1,6 +1,6 @@
 ---
 actions:
-  to: kubernetes/api/route-service.yaml
+  to: api-routes/route-service.yaml
 ---
 apiVersion: v1
 kind: Service
