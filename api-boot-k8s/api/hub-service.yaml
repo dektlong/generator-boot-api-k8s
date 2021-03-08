@@ -1,6 +1,6 @@
 ---
 actions:
-  to: api-routes/hub-service.yaml
+  to: kubernetes/api/hub-service.yaml
 ---
 apiVersion: v1
 kind: Service
