@@ -1,9 +1,13 @@
-# Generator to add Micro-Api and Spring Boot Kubernetes resources
+# Generator to add Micro-Api capabilities to a Spring Boot application deployed to Kubernetes
 
-This generator creates a Kubernetes Service and Deployment Resource to deploy a Spring Cloud Gateway, API Hub and Spring Boot application.  It also can create the Kubernetes resources for deploying a Spring Boot Observer Sidecar, should the application need it.
+This generator uses standard ```kubectl``` resources and services to configure Spring Boot app to leverage the Tanzu API grid components   
 
-If you used the starter service, then the generator has already been executed and you can deploy it's required services and then build and deploy the application.
-
+## Resources and Services created
+- Spring Boot deployment file and service
+- Spring Cloud Gateway for Kubernetes deployment and template routes configuration
+- API validation configuration (not implemented yet in API Validator)
+- Tanzu Observability configuration (via wavefront K8s proxy)  
+- Optional: Spring Boot Observer Sidecar (needed Spring Boot Observer server to run separately)
 
 ## Building and deploying the application
 
