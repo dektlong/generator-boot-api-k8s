@@ -12,7 +12,7 @@ Use these commands in the ```commands``` section of the Generators UI and/or in 
 - Tanzu Observability configuration (via wavefront K8s proxy)  
 - Optional: Spring Boot Observer Sidecar (needed Spring Boot Observer server to run separately)
 
-`api-boot-k8s api` creates a ```kubernetes/api`` library with the following artifacts
+`api-boot-k8s api` creates a ```kubernetes/api``` library with the following artifacts
 
 - Tanzu Spring Cloud Gateway deployment 
 - Tanzu API Hub deployment and service 
