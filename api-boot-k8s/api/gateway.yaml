@@ -12,9 +12,6 @@ spec:
     title: {{artifactId}} Gateway
     description: Gateway to control internal APIs for building microservices for {{artifactId}}. 
     version: 0.1.0
-    #validators:
-    #  - project
-    #  - internal
   count: 2
   sso:
     secret: {{artifactId}}-sso-secret
