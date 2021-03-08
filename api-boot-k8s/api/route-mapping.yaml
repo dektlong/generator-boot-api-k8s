@@ -1,6 +1,6 @@
 ---
 actions:
-  to: kubernetes/api/route-mapping.yaml
+  to: k8s-APIs/route-mapping.yaml
 ---
 apiVersion: "tanzu.vmware.com/v1"
 kind: SpringCloudGatewayMapping
