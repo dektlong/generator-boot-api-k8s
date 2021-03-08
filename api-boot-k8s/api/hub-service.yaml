@@ -1,6 +1,6 @@
 ---
 actions:
-  to: k8s-APIs/hub-server-service.yaml
+  to: api-routes/hub-service.yaml
 ---
 apiVersion: v1
 kind: Service
