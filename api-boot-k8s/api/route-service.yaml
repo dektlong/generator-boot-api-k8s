@@ -1,3 +1,7 @@
+---
+actions:
+  to: kubernetes/api/route-service.yaml
+---
 apiVersion: v1
 kind: Service
 metadata:
