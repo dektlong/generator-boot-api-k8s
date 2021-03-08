@@ -1,11 +1,11 @@
 ---
 actions:
-  to: api-routes/gateway.yaml
+  to: kubernetes/api/gateway.yaml
 ---
 apiVersion: "tanzu.vmware.com/v1"
 kind: SpringCloudGateway
 metadata:
-  name: {{artifactId}}-api-gateway
+  name: {{artifactId}}-gateway
 spec:
   api:
     serverUrl: https://{{artifactId}}.example.com
