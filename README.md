@@ -1,6 +1,6 @@
-# Generator to add Micro-Api capabilities to a Spring Boot application deployed to Kubernetes
+# Generator to add APIs capabilities to a Boot application on K8s
 
-This generator uses standard ```kubectl``` resources and services to configure Spring Boot app to leverage the Tanzu API grid components   
+This generator uses standard ```kubectl``` resources and services to configure a Spring Boot to leverage the Tanzu API grid components   
 
 ## Resources and Services created
 - Spring Boot deployment file and service
