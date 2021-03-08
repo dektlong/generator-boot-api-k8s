@@ -1,6 +1,6 @@
 ---
 actions:
-  to: kubernetes/core/app-service.yaml
+  to: application/service.yaml
 ---
 apiVersion: v1
 kind: Service
