@@ -1,12 +1,12 @@
 ---
 actions:
   injectMavenDependency:
-    to: pom.xml
+  to: pom.xml
 ---
 <dependency>
-	<groupId>com.wavefront</groupId>
-	<artifactId>wavefront-spring-boot-bom</artifactId>
-	<version>${wavefront.version}</version>
-	<type>pom</type>
-	<scope>import</scope>
+  <groupId>com.wavefront</groupId>
+  <artifactId>wavefront-spring-boot-bom</artifactId>
+  <version>${wavefront.version}</version>
+  <type>pom</type>
+  <scope>import</scope>
 </dependency>
