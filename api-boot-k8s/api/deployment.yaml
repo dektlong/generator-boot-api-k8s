@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-hub-server
+  labels:
+    app: api-hub-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-hub-server
+  template:
+    metadata:
+      labels:
+        app: api-hub-server
+    spec:
+      containers:
+      - image: api-hub/api-hub-server
+        name: api-hub-server
+        env:
+        - name: APIHUB_SOURCE_URLS
+          value: "http://scg-service-broker.cf.blue.springapps.io/openapi"
+        livenessProbe:
+          httpGet:
+            path: "/actuator/info"
+            port: 8080
+            scheme: "HTTP"
+          failureThreshold: 3
+          initialDelaySeconds: 5
+          periodSeconds: 30
+          successThreshold: 1
+          timeoutSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: "/actuator/health"
+            port: 8080
+            scheme: "HTTP"
+          failureThreshold: 3
+          initialDelaySeconds: 15
+          periodSeconds: 30
+          successThreshold: 1
+          timeoutSeconds: 10
