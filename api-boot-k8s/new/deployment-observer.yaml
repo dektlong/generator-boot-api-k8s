@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{artifactId}}
+spec:
+  selector:
+    matchLabels:
+      app: {{artifactId}}
+  template:
+    metadata:
+      labels:
+        app: {{artifactId}}
+    spec:
+       containers:
+        - name: {{artifactId}}
+          image: {{artifactId}}:{{artifactVersion}}
+          imagePullPolicy: Always
+          env:
+            - name: spring.profiles.active
+              value: k8s
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+        - name: spring-observer-sidecar
+          image: spring-observer/spring-boot-observer-sidecar:0.0.1
+          env:
+            - name: spring.boot.observer.sidecar.application-name
+              value: {{artifactId}}
+            - name: spring.boot.observer.client.host
+              value: value: spring-boot-observer-server
+          resources: {} 
