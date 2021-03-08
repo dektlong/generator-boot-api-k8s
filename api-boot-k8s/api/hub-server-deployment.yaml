@@ -18,8 +18,8 @@ spec:
       - image: api-hub/api-hub-server
         name: api-hub-server
         env:
-        - name: APIHUB_SOURCE_URLS
-          value: "http://scg-service-broker.cf.blue.springapps.io/openapi"
+        - name: {{artifactId}}-api-urls
+          value: "http://scg-openapi.example.com/openapi"
         livenessProbe:
           httpGet:
             path: "/actuator/info"
