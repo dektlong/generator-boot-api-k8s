@@ -1,6 +1,6 @@
 ---
 actions:
-  to: application/app-deployment-observer.yaml
+  to: application/deployment-observer.yaml
 ---
 apiVersion: apps/v1
 kind: Deployment
