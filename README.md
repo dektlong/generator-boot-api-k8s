@@ -8,6 +8,7 @@ This generator uses standard ```kubectl``` resources and services to optimize a 
 - API validation configuration (not implemented yet in API Validator)
 - Tanzu Observability configuration (via wavefront K8s proxy)  
 - Optional: Spring Boot Observer Sidecar (needed Spring Boot Observer server to run separately)
+- Sample tss.yaml file for adding generator Options (not implemented in generator yet)
 
 ## Building and deploying the application
 
