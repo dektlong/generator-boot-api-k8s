@@ -1,10 +1,13 @@
 command:
-  name: new
-  description: Create a new k8s config
+  name: api
+  description: Create a new backend API for online Stores
   options:
-    - name: memory
-      description:  "You can express memory as a plain integer or as a fixed-point number using one of these suffixes: E, P, T, G, M, K. You can also use the power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki."
+    - name: api-scorecard
+      description:  How to score the APIs included in this project
       dataType: string
-      defaultValue: 512Mi
-      paramLabel: MEMORY
-      inputType: text
+      defaultValue: project
+      inputType: checkbox    #multiple options
+      choices:
+        project: Project level access 
+        internal: Internal teams collabolartion 
+        external: Extenral facing APIs
