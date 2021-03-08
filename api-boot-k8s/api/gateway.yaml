@@ -1,6 +1,6 @@
 ---
 actions:
-  to: k8s-APIs/gateway.yaml
+  to: api-routes/gateway.yaml
 ---
 apiVersion: "tanzu.vmware.com/v1"
 kind: SpringCloudGateway
