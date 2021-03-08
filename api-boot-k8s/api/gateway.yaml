@@ -1,0 +1,14 @@
+apiVersion: "tanzu.vmware.com/v1"
+kind: SpringCloudGateway
+metadata:
+  name: {{artifactId}}-api-gateway
+spec:
+  api:
+    serverUrl: https://{{artifactId}}.example.com
+    title: {{artifactId}} Gateway
+    description: Gateway to control internal APIs for building microservices for {{artifactId}}. 
+    version: 0.1.0
+    #validator: internal
+  count: 2
+  sso:
+    secret: {{artifactId}}-sso-secret
