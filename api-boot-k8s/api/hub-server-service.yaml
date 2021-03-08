@@ -1,6 +1,6 @@
 ---
 actions:
-  to: kubernetes/api/hub-server-service.yaml
+  to: k8s-APIs/hub-server-service.yaml
 ---
 apiVersion: v1
 kind: Service
