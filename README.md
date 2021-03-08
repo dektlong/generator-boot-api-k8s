@@ -2,13 +2,25 @@
 
 This generator uses standard ```kubectl``` resources and services to optimize a Spring Boot application deployed with Tanzu API grid components   
 
-## Resources and Services created
-- Spring Boot deployment file and service
-- Spring Cloud Gateway for Kubernetes deployment and template routes configuration
-- API validation configuration (not implemented yet in API Validator)
+## Generator Commands
+
+Use these commands in the ```commands``` section of the Generators UI and/or in the `acc generator` CLI.
+
+`api-boot-k8s core` creates
+
+- Spring Boot deployment and service
 - Tanzu Observability configuration (via wavefront K8s proxy)  
 - Optional: Spring Boot Observer Sidecar (needed Spring Boot Observer server to run separately)
 - Sample tss.yaml file for adding generator Options (not implemented in generator yet)
+
+`api-boot-k8s api` creates
+
+- Spring Cloud Gateway Kubernetes deployment 
+- Tanzu API Hub Kubernetes deployment and service 
+- Example route definitions - Config, Mapping and Service
+- Openapi endpoint configuration
+- API validation configuration (not implemented yet in API Validator)
+
 
 ## Building and deploying the application
 
@@ -45,15 +57,6 @@ This generator creates the Kubernetes `service` and `deploymnet` resources files
 To use the generator you will need to install the following command line tool:
 
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
-
-
-## Generator Commands
-
-These commands use the `tss` CLI.
-
-`tss k8s-simple new` creates
-
-* A `kubernetes` directory with a `service.yaml` and `deployment.yaml`
 
 
 ## Generator installation
