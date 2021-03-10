@@ -1,6 +1,6 @@
 ---
 actions:
-  to: application/deployment.yaml
+  to: app/deployment.yaml
 ---
 apiVersion: apps/v1
 kind: Deployment
