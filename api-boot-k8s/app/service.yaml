@@ -1,6 +1,6 @@
 ---
 actions:
-  to: application/service.yaml
+  to: app/service.yaml
 ---
 apiVersion: v1
 kind: Service
