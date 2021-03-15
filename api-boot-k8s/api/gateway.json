@@ -1,0 +1,13 @@
+{
+    "sso": {
+      "plan": "{{artifactId}}-sso-secret"
+    },
+    "count": 2,
+    "host": "{{artifactId}}-gateway",
+    "title": "{{artifactId}}-gateway",
+    "description": "Demo application for Tanzu API Grid",
+    "documentation": "https://github.com/dektlong/_dekt4pets-demo",
+    "version": "1.0.0",
+    "error-routes": [ { "code": "404", "redirect-path": "/rescue" } ]
+}
+  
