@@ -1,6 +1,6 @@
 ---
 actions:
-  to: kubernetes/api/hub.yaml
+  to: deployment/gateway/hub.yaml
 ---
 apiVersion: apps/v1
 kind: Deployment
