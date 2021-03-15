@@ -1,6 +1,6 @@
 ---
 actions:
-  to: kubernetes/api/gateway.yaml
+  to: deployment/gateway/gateway-k8s.yaml
 ---
 apiVersion: "tanzu.vmware.com/v1"
 kind: SpringCloudGateway
