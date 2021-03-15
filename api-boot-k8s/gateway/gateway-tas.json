@@ -1,6 +1,6 @@
 ---
 actions:
-  to: deployment/gateway/gateway-tas.yaml
+  to: deployment/gateway/gateway-tas.json
 ---
 {
     "sso": {
