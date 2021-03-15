@@ -1,3 +1,7 @@
+---
+actions:
+  to: deployment/gateway/gateway-k8s.yaml
+---
 {
     "sso": {
       "plan": "{{artifactId}}-sso-secret"
