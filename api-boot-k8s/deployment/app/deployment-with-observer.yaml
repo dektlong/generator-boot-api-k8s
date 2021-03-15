@@ -1,6 +1,6 @@
 ---
 actions:
-  to: kubernetes/app/deployment-with-observer.yaml
+  to: deployment/app/deployment-with-observer.yaml
 ---
 apiVersion: apps/v1
 kind: Deployment
