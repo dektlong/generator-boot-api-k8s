@@ -1,6 +1,6 @@
 ---
 actions:
-  to: deployment/gateway/gateway-k8s.yaml
+  to: deployment/gateway/gateway-tas.yaml
 ---
 {
     "sso": {
